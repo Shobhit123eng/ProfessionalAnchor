@@ -1,0 +1,43 @@
+/* ════════════════════════════════════
+   COURSE.CSS — Extra styles for course page
+════════════════════════════════════ */
+
+.course-hero { padding: 140px 0 80px; text-align: center; background: radial-gradient(ellipse 80% 60% at 50% 20%, rgba(37,99,235,.18) 0%, transparent 60%), #050B18; }
+
+/* Quick stats bar */
+.c-stats { display: flex; justify-content: center; gap: 40px; margin-top: 40px; flex-wrap: wrap; }
+.c-stat  { display: flex; flex-direction: column; align-items: center; gap: 4px; }
+.c-stat strong { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 900; }
+.c-stat span   { color: rgba(255,255,255,.4); font-size: 13px; }
+
+/* Modules grid */
+.module-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.module      { border-radius: 20px; padding: 28px; transition: transform .3s; }
+.module:hover{ transform: translateY(-6px); }
+.mod-num     { font-family: 'Playfair Display', serif; font-size: 40px; font-weight: 900; opacity: .3; margin-bottom: 12px; }
+.module h3   { font-size: 17px; font-weight: 600; margin-bottom: 10px; }
+.module p    { color: rgba(255,255,255,.55); font-size: 13px; line-height: 1.7; }
+
+/* Benefits */
+.benefits-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; max-width: 800px; margin: 0 auto; }
+.benefit-col   { display: flex; flex-direction: column; gap: 16px; }
+.ben-item      { display: flex; align-items: center; gap: 14px; }
+.ben-item i    { font-size: 18px; flex-shrink: 0; }
+.ben-item span { color: rgba(255,255,255,.7); font-size: 15px; }
+
+/* Enroll card */
+.enroll-card  { max-width: 600px; margin: 0 auto; border-radius: 24px; padding: 50px; text-align: center; border: 1px solid rgba(245,158,11,.3); box-shadow: 0 0 40px rgba(245,158,11,.1); }
+.hot-badge    { background: rgba(245,158,11,.2); color: var(--gold); font-size: 12px; font-weight: 700; padding: 6px 16px; border-radius: 99px; letter-spacing: 2px; text-transform: uppercase; }
+.price-display{ margin: 24px 0; }
+.old-p  { color: rgba(255,255,255,.3); text-decoration: line-through; font-size: 18px; }
+.new-p  { font-family: 'Playfair Display', serif; font-size: 52px; font-weight: 900; }
+.save-p { color: #22C55E; font-size: 13px; display: block; margin-top: 4px; }
+
+@media(max-width: 900px){
+  .module-grid   { grid-template-columns: repeat(2, 1fr); }
+  .benefits-wrap { grid-template-columns: 1fr; }
+}
+@media(max-width: 480px){
+  .module-grid { grid-template-columns: 1fr; }
+  .c-stats     { gap: 24px; }
+}
