@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: YOUR_GITHUB_USERNAME/Kanchor
   branch: main
 
 media_folder: "images/uploads"
@@ -7,27 +8,15 @@ public_folder: "/images/uploads"
 
 collections:
   - name: "blog"
-    label: "Blog Posts"
-
-    folder: "content"
-
+    label: "Blogs"
+    folder: "content/blog"
     create: true
 
-    slug: "{{slug}}"
-
-    format: "frontmatter"
-
-    extension: "md"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
 
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-
-      - { label: "Featured Image", name: "image", widget: "image", required: false }
-
-      - { label: "Category", name: "category", widget: "string" }
-
-      - { label: "Description", name: "description", widget: "text" }
-
-      - { label: "Body", name: "body", widget: "markdown" }
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Date", name: "date", widget: "datetime"}
+      - {label: "Thumbnail", name: "thumbnail", widget: "image"}
+      - {label: "Body", name: "body", widget: "markdown"}
